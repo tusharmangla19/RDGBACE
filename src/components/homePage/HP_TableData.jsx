@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { db, collection, getDocs, doc } from "../../firebase/Firebase";
 import { morningProgramSchema } from "../../personalSadhnaSchema";
-import { calculateFieldAverage } from "../personalSadhana/utils";
+import { calculateFieldAverage } from "../personalSadhana/utils"; // Make sure this path is correct
 import MissingFieldsChecker from "../personalSadhana/MissingFieldsChecker";
 import "./HP_TableData.css";
-
+import { format } from "date-fns"; // Ensure date-fns is installed
 const HP_TableData = ({ id, name, number, category }) => {
 	const [formData, setFormData] = useState([]);
-	// const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 	const [averages, setAverages] = useState({});
 	const [selectedMonth, setSelectedMonth] = useState(new Date());
 
@@ -17,22 +17,16 @@ const HP_TableData = ({ id, name, number, category }) => {
 		const fetchData = async () => {
 			if (!id) {
 				console.error("No id provided");
-				// setIsLoading(false);
+				setIsLoading(false);
 				return;
 			}
 
 			try {
 				const devoteeRef = doc(db, "morningProgram", dvtId);
 				const devoteeCollection = collection(devoteeRef, "dailyData");
-				// Generate valid date strings for the selected Month/Year to filter correctly
-				const datesInMonth = getMonthDates(selectedMonth);
-				const validDateStrings = datesInMonth.map((date) =>
-					date.toLocaleDateString("en-US", {
-						weekday: "short",
-						day: "numeric",
-						month: "short",
-					})
-				);
+				// Get the current month's abbreviation
+				const currentMonthAbbreviation = format(selectedMonth, "MMM"); // "MMM" gives short month names like "Dec"
+
 				// Fetch all documents (since Firestore cannot query directly on part of a string)
 				const querySnapshot = await getDocs(devoteeCollection);
 				const data = [];
@@ -56,16 +50,15 @@ const HP_TableData = ({ id, name, number, category }) => {
 				}, {});
 
 				setAverages(newAverages);
-				// setIsLoading(false);
+				setIsLoading(false);
 			} catch (error) {
 				console.error("Error fetching documents: ", error);
-				// setIsLoading(false);
+				setIsLoading(false);
 			}
 		};
 
 		fetchData();
 	}, [id]);
-
 	let rowClass = "";
 	if (category === "BC") {
 		rowClass = "category-BC";
@@ -120,7 +113,7 @@ const HP_TableData = ({ id, name, number, category }) => {
 				</td>
 
 				{morningProgramSchema.map((field) => (
-					<td key={field.name}>{averages[field.name]}</td>
+					<td key={field.name}>{averages[field.name] || ""}</td>
 				))}
 			</tr>
 		</>

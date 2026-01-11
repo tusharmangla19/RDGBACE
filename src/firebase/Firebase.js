@@ -11,12 +11,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyBBx54nlMhqoEvw4dt5fqfIRB4WDHf4MHY",
-	authDomain: "iyf-sadhana.firebaseapp.com",
-	projectId: "iyf-sadhana",
-	storageBucket: "iyf-sadhana.firebasestorage.app",
-	messagingSenderId: "819660354644",
-	appId: "1:819660354644:web:d656f01a906fc6937269c1",
+ apiKey: "AIzaSyC3albtx4MfEWtFQBQWuHcrJZSGPymLWgY",
+  authDomain: "sadhana-app-slate.firebaseapp.com",
+  projectId: "sadhana-app-slate",
+  storageBucket: "sadhana-app-slate.firebasestorage.app",
+  messagingSenderId: "524576731723",
+  appId: "1:524576731723:web:ac4c9dc357caaa5d9013ce"	
 };
 
 const firebaseApp = initializeApp(firebaseConfig);

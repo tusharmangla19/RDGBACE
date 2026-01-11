@@ -12,7 +12,8 @@ export const calculateFieldAverage = (formData, fieldName) => {
 				if (
 					fieldName === "Wake Up Time" ||
 					fieldName === "Sleep Time" ||
-					fieldName === "16th Round"
+					fieldName === "16th Round" ||
+					fieldName === "Sleep"
 				) {
 					const timeString = record[fieldName].trim().toLowerCase();
 					let hours, minutes, period;
@@ -44,7 +45,7 @@ export const calculateFieldAverage = (formData, fieldName) => {
 				) {
 					const value = parseInt(record[fieldName], 10);
 					return isNaN(value) ? null : value;
-				} else if (fieldName === "Mangala Arti") {
+				} else if (fieldName === "Mangala Arti"||fieldName === "Class") {
 					const response = record[fieldName].trim().toLowerCase();
 					return response === "yes" ? 1 : 0;
 				}
@@ -57,7 +58,8 @@ export const calculateFieldAverage = (formData, fieldName) => {
 		if (
 			fieldName === "Wake Up Time" ||
 			fieldName === "Sleep Time" ||
-			fieldName === "16th Round"
+			fieldName === "16th Round" ||
+			fieldName === "Sleep"	
 		) {
 			const radians = numericValues.map(
 				(minutes) => (minutes / (24 * 60)) * 2 * Math.PI
@@ -87,7 +89,7 @@ export const calculateFieldAverage = (formData, fieldName) => {
 		) {
 			const sum = numericValues.reduce((acc, value) => acc + value, 0);
 			return Math.round(sum / numericValues.length);
-		} else if (fieldName === "Mangala Arti") {
+		} else if (fieldName === "Mangala Arti"||fieldName === "Class") {
 			return numericValues.reduce((acc, value) => acc + value, 0);
 		}
 	}
