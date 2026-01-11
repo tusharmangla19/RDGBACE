@@ -1,0 +1,115 @@
+.prevMonBtn {
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.submitBtn {
+	margin-top: 1.4rem;
+	margin-left: 0.7rem;
+}
+.morningProgramComponent {
+	padding-top: 10rem;
+}
+.mpHeader {
+	padding: 0.5rem 0rem 0rem 2rem;
+}
+.mpHeader_dvtName {
+	padding-bottom: 1rem;
+}
+.mpHeader_name {
+	text-decoration: underline;
+}
+
+.fields {
+	width: auto; /* Allow the width to be determined by content */
+}
+
+.text_inputField {
+	width: 3rem; /* Set the width of the input fields */
+	min-width: 60px; /* Optional: Add a minimum width */
+	max-width: 100px; /* Optional: Limit maximum width */
+	display: flex;
+	margin: auto;
+}
+.time_inputField {
+	width: 6rem; /* Set the width of the input fields */
+
+	display: flex;
+	margin: auto;
+}
+
+.mangalaArti_inputField {
+	width: auto; /* Makes the select tag take the full width of its container */
+	padding: 8px; /* Adds padding for better usability */
+	font-size: 12px; /* Increases font size for better readability */
+	border: 1.5px solid #ccc; /* Adds a subtle border */
+	border-radius: 4px; /* Rounds the corners */
+	background-color: transparent;
+	color: #fff; /* Sets a neutral text color */
+	appearance: none; /* Removes default browser styles */
+	cursor: pointer; /* Shows pointer cursor on hover */
+	margin-left: 1rem;
+}
+.seva_inputField {
+	width: auto; /* Makes the select tag take the full width of its container */
+	padding: 8px; /* Adds padding for better usability */
+	font-size: 12px; /* Increases font size for better readability */
+	border: 1.5px solid #ccc; /* Adds a subtle border */
+	border-radius: 4px; /* Rounds the corners */
+	background-color: transparent;
+	color: #fff; /* Sets a neutral text color */
+	appearance: none; /* Removes default browser styles */
+	cursor: pointer; /* Shows pointer cursor on hover */
+	margin-left: 1rem;
+}
+
+/* Hover Effect */
+select:hover {
+	border-color: #888; /* Changes border color on hover */
+}
+
+/* Focus Effect */
+select:focus {
+	outline: none; /* Removes the default outline */
+	border-color: #007bff; /* Adds a blue border when focused */
+	box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Adds a subtle shadow for focus */
+
+	background-color: black;
+}
+
+/* Disabled State */
+select:disabled {
+	background-color: black; /* Light gray background for disabled state */
+	color: black; /* Gray text color for disabled state */
+	cursor: not-allowed; /* Shows a not-allowed cursor */
+}
+.weeklyAverageRow {
+	background-color: #001635;
+}
+.weeklyAverageRow:hover {
+	background-color: #001635;
+}
+
+.lightMode .mangalaArti_inputField {
+	background-color: rgba(0, 0, 0, 0.07);
+	color: black;
+	font-weight: 400;
+}
+.lightMode .seva_inputField {
+	background-color: rgba(0, 0, 0, 0.07);
+	color: black;
+	font-weight: 400;
+}
+.lightMode .weeklyAverageRow {
+	color: white;
+}
+/* Optional: Adjust for Smaller Screens */
+@media (max-width: 1000px) {
+	select {
+		width: 70%;
+		font-size: 10px; /* Adjust font size for smaller devices */
+		padding: 6px; /* Adjust padding for smaller devices */
+		margin: auto;
+		margin-left: 0.63rem;
+	}
+}

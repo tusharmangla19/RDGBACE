@@ -1,0 +1,208 @@
+body {
+	font-family: "Nunito", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+table {
+	width: 100%; /* Ensures the table spans its container */
+	border-collapse: collapse;
+	margin-top: 20px;
+	table-layout: auto; /* Allows cells to resize based on content */
+}
+th {
+	font-size: 1.2rem;
+}
+th,
+td {
+	padding: 10px;
+	text-align: left;
+	transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Row hover effect */
+tr:hover {
+	background-color: rgba(210, 210, 210, 0.1);
+}
+
+/* Basic styling for the input field */
+input {
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	transition: border-color 0.9s ease-in-out, background-color 0.3s, color 0.3s;
+	font-size: 1rem;
+	outline: none;
+	border: 0;
+}
+
+/* Hover effect */
+input:hover {
+	border-color: #4caf50;
+}
+
+/* Focus effect */
+input:focus {
+	outline: none;
+	border-color: #2196f3;
+	box-shadow: 0 0 14px rgba(33, 150, 243, 0.6);
+}
+
+/* Basic styling for the button */
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #3498db;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+button:hover {
+	background-color: #2980b9;
+}
+
+/* Active/focus effect */
+button:active,
+button:focus {
+	outline: none;
+	background-color: #1f618d;
+}
+.homePage {
+	padding-top: 9rem;
+}
+.label {
+	font-size: 1.3rem;
+}
+
+/* Dark Mode Styles */
+.darkMode {
+	background-color: rgb(2, 6, 23);
+	color: rgb(244, 244, 244);
+}
+
+.darkMode th,
+.darkMode td {
+	border: 3px solid #444;
+}
+
+.darkMode input {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
+
+.darkMode a {
+	color: #64b5f6;
+}
+
+.darkMode a:hover {
+	color: #bbdefb;
+}
+
+.darkMode button {
+	background-color: #1976d2;
+}
+
+.darkMode button:hover {
+	background-color: #1565c0;
+}
+
+/* Light Mode Styles */
+.lightMode {
+	/* 240, 240, 240 */
+	background-color: rgb(240, 240, 240);
+	color: black;
+}
+
+.lightMode th,
+.lightMode td {
+	border: 3px solid #333;
+}
+
+.lightMode input {
+	background-color: rgba(0, 0, 0, 0.07);
+	color: black;
+}
+
+.lightMode a {
+	color: #0056b3;
+}
+
+.lightMode a:hover {
+	color: #003d82;
+}
+
+.lightMode button {
+	background-color: #3498db;
+}
+
+.lightMode button:hover {
+	background-color: #2980b9;
+}
+
+/* Updated Button Styles */
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color color 0.3s ease-in;
+	/* margin-top: 9rem; */
+}
+
+.devoteeDetail {
+	margin-top: 10rem;
+	margin-left: 1rem;
+}
+
+/* Dark Mode Button Styles */
+.darkMode button {
+	background-color: #2a2f6b; /* A vibrant green */
+	color: #ffffff;
+}
+
+.darkMode button:hover {
+	background-color: #2a306bc9; /* A slightly darker green */
+}
+
+/* Light Mode Button Styles */
+.lightMode button {
+	background-color: #2c2c2c; /* A pleasant blue */
+	color: white;
+}
+
+.lightMode button:hover {
+	background-color: #1f1f1f; /* A slightly darker blue */
+}
+.category-BC {
+	color: black;
+	background-color: #ff8534eb;
+}
+.category-bace {
+	color: black;
+	background-color: yellow;
+}
+.category-bace {
+	color: black;
+	background-color: #ffff00f5;
+}
+.category-email {
+	color: black;
+	background-color: #5bff4de3;
+}
+th {
+	text-align: center;
+}
+
+/* Basic Select Styling */
+a {
+	text-decoration: none;
+}

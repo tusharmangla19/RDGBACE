@@ -1,0 +1,66 @@
+/* Global reset for consistent styling */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between; /* Space between items */
+	align-items: center; /* Vertically align items */
+	width: 100%; /* Ensure header spans the full width */
+	padding: 10px 20px;
+	background-color: #111; /* Dark background */
+	color: white; /* White text */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	height: 8rem;
+	background-image: url();
+}
+
+.logo,
+.spLogo {
+	flex: 1; /* Make both logos occupy equal space */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	flex: 2;
+	text-align: center;
+	font-size: 2rem;
+	/* line-height: 1.2; */
+	margin-top: 0.5rem;
+}
+
+.logoImg,
+.spImg {
+	width: 7rem;
+}
+.logoImg {
+	border-radius: 50%;
+}
+.spImg {
+	width: 8.5rem;
+}
+.head {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+}
+.quoteBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quote {
+	font-weight: bold;
+}
