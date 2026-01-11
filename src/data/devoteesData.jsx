@@ -7,8 +7,10 @@ const devoteesData = [
 	{ id: 6, name: "Yagya Purush p" },
 	{ id: 7, name: "Manish p" },
 	{ id: 8, name: "Abhishek p " },
-	{ id: 10, name: "Anshuman Rajoriya p " },
-	{ id: 11, name: "Karuna Avtaar p" },
+	{ id: 9, name: "Anshuman Rajoriya p " },
+	{ id: 10, name: "Karuna Avtaar p" },
+	{ id: 11, name: "Priyanshu p" },
+	{ id: 12, name: "Arnav p" },
 	// { id: 12, name: "Tanishq P", category: "email" },
 	// { id: 13, name: "Chaitanya P", category: "email" },
 
